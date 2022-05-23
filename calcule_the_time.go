@@ -20,7 +20,7 @@ func operation(hours, minutes float64) float64{
 		fmt.Println(int(-totalResult))
 		fmt.Println("-----------------------")
 	} else {
-		fmt.Println(int(totalResult))
+		fmt.Println(totalResult)
 		fmt.Println("-----------------------")
 	}
 	
