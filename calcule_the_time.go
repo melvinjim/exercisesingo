@@ -13,9 +13,9 @@ func main(){
 func operation(hours, minutes float64) float64{
 	calculoM := (minutes / 60)
 	total := float64(calculoM) + hours
-	horas_totales := (total * 30)
+	totalHours := (total * 30)
 	min_grados := (minutes * 6)
-	totalResult := (min_grados - horas_totales)
+	totalResult := (min_grados - totalHours)
 	if (totalResult < 0){
 		fmt.Println(int(-totalResult))
 	} else {
