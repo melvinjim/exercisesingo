@@ -5,50 +5,50 @@ import (
 )
 
 func main() {
-	var respuesta string
+	var response string
 	var firstNumber int
 	var secondNumber int
 
-	fmt.Print("desea realizar una suma, resta, multiplicacion o division?-->")
-	fmt.Scanln(&respuesta)
+	fmt.Print("You want to perform an addition, subtraction, multiplication or division?-->")
+	fmt.Scanln(&response)
 
-	if respuesta == "suma" {
-		fmt.Print("¿Cuál es el primer numero desea sumar? ")
+	if response == "add" {
+		fmt.Print("¿What is the first number you want to add?")
 		fmt.Scanln(&firstNumber)
-		fmt.Print("¿Cuál es el segundo numero que desea sumar? ")
+		fmt.Print("¿What is the second number you want to add?")
 		fmt.Scanln(&secondNumber)
 
-		var suma = firstNumber + secondNumber
-		fmt.Printf("el resultado es: %d\n", suma)
+		var add = firstNumber + secondNumber
+		fmt.Printf("The result is: %d\n", add)
 	}
-	
-	if respuesta == "resta" {
-		fmt.Print("¿Cuál es el primer numero desea restar? ")
+
+	if response == "subtraction" {
+		fmt.Print("¿What is the first number you want to subtract?")
 		fmt.Scanln(&firstNumber)
-		fmt.Print("¿Cuál es el segundo numero que desea restar? ")
+		fmt.Print("¿What is the second number you want to subtract?")
 		fmt.Scanln(&secondNumber)
 
-		var resta = firstNumber - secondNumber
-		fmt.Printf("el resultado es: %d\n", resta)
+		var subtraction = firstNumber - secondNumber
+		fmt.Printf("The result is: %d\n", subtraction)
 	}
 
-	if respuesta == "multiplicacion" {
-		fmt.Print("¿Cuál es el primer desea multiplicar? ")
+	if response == "multiplication" {
+		fmt.Print("¿What is the first number you want to multiply? ")
 		fmt.Scanln(&firstNumber)
-		fmt.Print("¿Cuál es el segundo numero que desea multiplicar? ")
+		fmt.Print("¿What is the second number you want to multiply? ")
 		fmt.Scanln(&secondNumber)
 
 		var multiplications = firstNumber * secondNumber
-		fmt.Printf("el resultado es: %d\n", multiplications)
+		fmt.Printf("The result is: %d\n", multiplications)
 	}
 
-	if respuesta == "division" {
-		fmt.Print("¿Cuál es el primer desea dividir? ")
+	if response == "division" {
+		fmt.Print("¿What is the first number you want to divide?")
 		fmt.Scanln(&firstNumber)
-		fmt.Print("¿Cuál es el segundo numero que desea dividir? ")
+		fmt.Print("¿What is the first number you want to divide?")
 		fmt.Scanln(&secondNumber)
 
 		var dividir = firstNumber / secondNumber
-		fmt.Printf("el resultado es: %d\n", dividir)
+		fmt.Printf("The result is: %d\n", dividir)
 	}
 }
