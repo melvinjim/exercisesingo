@@ -12,7 +12,7 @@ function planetInformation(){
             let datos = JSON.parse(this.responseText);
             document.getElementById("date").innerHTML = "Date: " +  datos.date;
             document.getElementById("explanation").innerHTML = "Explanation: " +  datos.explanation;
-            document.getElementById("hdurl").innerHTML = "Hdurl: " +  datos.hdurl;
+            document.getElementById("Hdurl").innerHTML = "Hdurl: " +  datos.hdurl;
             document.getElementById("mediaType").innerHTML = "MediaType: " +  datos.media_type;
             document.getElementById("serviceVersion").innerHTML = "ServiceVersion: " +  datos.service_version;
             document.getElementById("title").innerHTML = "Title: " +  datos.title;
