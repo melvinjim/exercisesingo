@@ -1,14 +1,14 @@
 package models
 
 type Operation struct {
-    firstNumber int
+	firstNumber  int
 	secondNumber int
 }
 
-func New(firstNumber, secondNumber int) Operation{  
-    n := Operation {firstNumber, secondNumber}
+func New(firstNumber, secondNumber int) Operation {
+	n := Operation{firstNumber, secondNumber}
 
-    return n
+	return n
 }
 
 func (n Operation) Multiplication() int{
