@@ -40,19 +40,7 @@ func ShowPlanetary(w http.ResponseWriter, r *http.Request) {
 }
 
 func Planetary(w http.ResponseWriter, r *http.Request) {
-	url := "https://api.nasa.gov/planetary/apod?api_key=e2iQ0x7l5wDJz7bKZBkB5DL8DI5f6dSK9fFVGdNZ"
-
-	req, _ := http.NewRequest("GET", url, nil)
-	req.Header.Add("Authorization", "bearer")
-
-	client := &http.Client{}
-	resp, _ := client.Do(req)
-
-	data, _ := ioutil.ReadAll(resp.Body)
-	fmt.Println(string(data))
-
-	var planetary models.Planetary
-	json.Unmarshal(data, &planetary)
+	planetary := models.GetPlanetary()
 
 	fmt.Printf("Date: %+v\n", planetary.Date)
 	fmt.Printf("Explanation: %+v\n", planetary.Explanation)
@@ -70,6 +58,6 @@ func Profile(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		panic(err)
 	}
-	
+
 	w.Write(file)
 }
