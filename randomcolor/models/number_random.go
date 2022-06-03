@@ -11,9 +11,6 @@ var colors = [16]string{"rojo", "verde", "azul", "salmon", "gris", "negro", "vei
 func ColorRandom() string {
 	var random = RandomInt(0, 15)
 
-	if random%2 == 1 {
-		ColorRandom()
-	}
 	return colors[random]
 }
 
@@ -25,6 +22,11 @@ func RandomInt(min, max int) int {
 
 	n := nBig.Int64()
 
+	if int(n)%2 == 1 {
+		return RandomInt(min, max)
+	}
+
 	fmt.Println("n=", int(n))
+
 	return int(n)
 }
