@@ -3,15 +3,16 @@ package models_test
 import (
 	"calculator/models"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestMultiplication(t *testing.T) {
 	n := models.New(29, 37)
 	result := n.Multiplication()
 	expected := 1073
-	if result != expected {
-		t.Errorf("Multiplication: Expected: %d, result: %d", expected, result)
-	}
+
+	assert.Equal(t, result, expected)
 }
 
 func TestDivision(t *testing.T) {
