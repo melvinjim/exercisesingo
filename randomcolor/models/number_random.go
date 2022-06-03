@@ -22,10 +22,11 @@ func RandomInt(min, max int) int {
 
 	n := nBig.Int64()
 
-	if n%2 == 1 {
-		return RandomInt(0, 15)
+	if int(n)%2 == 1 {
+		return RandomInt(min, max)
 	}
 
 	fmt.Println("n=", int(n))
+
 	return int(n)
 }

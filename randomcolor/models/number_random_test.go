@@ -8,5 +8,6 @@ import (
 
 func TestNumber(t *testing.T) {
 	result := models.RandomInt(0, 15)
+
 	assert.Equal(t, result%2, 0)
 }
